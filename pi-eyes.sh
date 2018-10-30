@@ -8,12 +8,12 @@ fi
 
 clear
 
-echo "This script installs software for the Adafruit"
+echo "This script installs software for the CallMeCode"
 echo "Snake Eyes Bonnet for Raspberry Pi. Steps include:"
 echo "- Update package index files (apt-get update)"
 echo "- Install Python libraries: numpy, pi3d, svg.path,"
 echo "  python-dev, python-imaging"
-echo "- Install Adafruit eye code and data in /boot"
+echo "- Install CallMeCode eye code and data in /boot"
 echo "- Enable SPI0 and SPI1 peripherals if needed"
 echo "- Set HDMI resolution, disable overscan"
 echo "Run time ~25 minutes. Reboot required."
@@ -148,9 +148,9 @@ pip install numpy pi3d svg.path adafruit-ads1x15
 # smbus and ads1x15 Python libs are installed regardless whether ADC
 # is enabled; simplifies the Python code a little (no "uncomment this")
 
-echo "Installing Adafruit code and data in /boot..."
+echo "Installing CallMeCode code and data in /boot..."
 cd /tmp
-curl -LO https://github.com/adafruit/Pi_Eyes/archive/master.zip
+curl -LO https://github.com/Afantor/Pi_Eyes/archive/master.zip
 unzip master.zip
 # Moving between filesystems requires copy-and-delete:
 cp -r Pi_Eyes-master /boot/Pi_Eyes
